@@ -1,0 +1,8 @@
+<a class="navbar-brand" href="{{ site.link }}">
+    {% if site.theme.theme_mod('custom_logo') %}
+        <img class="navbar-brand-image" src="{{ Image(site.theme.theme_mod('custom_logo')).src('full') }}" alt="{{ site.name }} logo">
+    {% else %}
+        <img class="navbar-brand-image" src="{{ site.theme.link }}/public/images/logos/header-logo.svg" alt="{{ site.name }} logo">
+    {% endif %}
+    <span class="sr-only">{{ site.name }}</span>
+</a>

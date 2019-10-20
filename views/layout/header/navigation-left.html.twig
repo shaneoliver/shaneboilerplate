@@ -1,0 +1,13 @@
+{% include 'layout/nav-brand.html.twig' %}
+        
+{% if menus.primary %}
+    
+    {% include 'layout/nav-toggle.html.twig' %}
+
+    <div class="collapse navbar-collapse" id="primaryNavigation">
+        <ul class="navbar-nav">
+            {% import 'layout/navigation.html.twig' as nav %}
+            {{ nav.render(menus.primary.get_items) }}
+        </ul>
+    </div>
+{% endif %}

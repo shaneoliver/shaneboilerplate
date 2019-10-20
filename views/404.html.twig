@@ -1,0 +1,25 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block content %}
+
+    <main role="main" class="entry type-post {{ post.class }}">
+
+        {% include 'partials/breadcrumb.html.twig' %}
+
+        <div class="entry-content">
+            <div class="container py-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="entry-header"><span class="decorative-dots should-animate" data-transform-by="5"></span>{{ __(title, text_domain) }}</h1>
+                    </div>
+                    <div class="col-12">
+                        <p class="search-instructions">{{  __('Sorry, we couldn\'t find what you were looking for.', text_domain) }}</p>
+                        <p class="search-instructions">{{ __('Please try searching.', text_domain) }}</p>
+                        {% include 'partials/search-form.html.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

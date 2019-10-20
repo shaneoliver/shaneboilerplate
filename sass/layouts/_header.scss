@@ -1,0 +1,67 @@
+$utility-bg: $primary;
+$utility-color: $white;
+$utility-link-color: $utility-color;
+$utility-link-color-hover: darken($utility-link-color, 10%);
+$navigation-bg: $secondary;
+$navigation-color: $white;
+$navigation-link-color: $navigation-color;
+$navigation-link-color-hover: darken($navigation-link-color, 10%);
+
+.site-header {
+	z-index: 1000;
+
+	.utility {
+		padding: .5rem 0;
+		background-color: $utility-bg;
+		color: $utility-color;
+
+		a {
+			color: $utility-link-color;
+
+			@include hover-focus {
+                color: $utility-link-color-hover;
+            }
+		}
+	}
+}
+
+.site-header {
+	.navbar {
+		background-color: $navigation-bg;
+		color: $navigation-color;
+
+		.nav-link {
+			color: $navigation-link-color;
+
+			@include hover-focus {
+                color: $navigation-link-color-hover;
+            }
+		}
+	}
+}
+
+.headroom {
+	position: fixed;
+	top: 0;
+	left: 0; 
+	right: 0;
+	will-change: transform;
+	transition: transform 200ms linear;
+	
+	// Offset correctly if the admin bar is showing
+	.admin-bar & {
+		top: 32px;
+	}
+}
+.headroom--pinned {
+	transform: translateY(0%);
+}
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+
+.navbar-brand {
+	&-image {
+		width: 50px;
+	}
+}

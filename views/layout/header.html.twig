@@ -1,0 +1,21 @@
+<header class="site-header headroom">
+    {% if theme.theme_mod('show_utility_section') %}
+        <section class="utility">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex align-items-center justify-content-end">
+                        {% include ['layout/header/' ~ theme.theme_mod('utility_template') ~ '.html.twig', 'layout/header/utility.html.twig'] %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            {% include ['layout/header/' ~ theme.theme_mod('navigation_template') ~ '.html.twig', 'layout/header/navigation-right.html.twig'] %}
+        </div>
+    </nav>
+</header>
+    
+    

@@ -1,0 +1,13 @@
+<section class="entry-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="entry-heading">{{ title | default(post.title) }}</h1>
+                <div>{{ breadcrumb }}</div>
+                <picture>
+                    <img src="{{ post.thumbnail.src('hero') }}" alt="{{ post.title }} thumbnail">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+// Import custom variables
+@import "common/variables";
+
+/** Import Bootstrap */
+@import "~bootstrap/scss/bootstrap";
+
+/** Import theme styles */
+@import "common/global";
+@import "common/entry";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "components/gallery";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+// Vendor
+@import "vendor/gravity"; // https://docs.gravityforms.com/
+@import "vendor/hamburgers"; // https://jonsuh.com/hamburgers/
+@import "vendor/aos"; // https://michalsnik.github.io/aos/
+@import "vendor/woocommerce";

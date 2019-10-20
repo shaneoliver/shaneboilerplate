@@ -1,0 +1,19 @@
+<section class="entry-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div>{{ breadcrumb }}</div>
+                <h1 class="entry-heading">{{ title | default(post.title) }}</h1>
+                {% include "partials/post-meta.html.twig" %}
+                {% if post.thumbnail %}
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="{{ post.thumbnail.src('hero') }}">
+                        <source media="(min-width: 990px)" srcset="{{ post.thumbnail.src('large') }}">
+                        <source media="(min-width: 768px)" srcset="{{ post.thumbnail.src('medium') }}">
+                        <img src="{{ post.thumbnail.src('hero') }}" alt="{{ post.title }} thumbnail">
+                    </picture>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

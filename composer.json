@@ -1,0 +1,23 @@
+{
+    "name": "shaneoliver/wordpress-boilerplate",
+    "description": "Boilerplate WordPress theme",
+    "type":"wordpress-theme",
+    "minimum-stability" : "stable",
+    "authors": [
+        {
+            "name": "Shane",
+            "email": "info@shaneoliver.com.au"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.1",
+        "twig/twig": "~1.34",
+        "timber/timber": "^1.7",
+        "htmlburger/carbon-fields": "^3.0",
+        "htmlburger/carbon-field-icon": "^3.0"
+    },
+    "autoload": {
+        "psr-4": { "ShaneOliver\\": "./theme" },
+        "files": [ "./theme/helpers.php" ]
+    }
+}

@@ -1,0 +1,91 @@
+/**
+* WordPress Generated Classes
+* @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+*/
+
+/** Media alignment */
+.alignnone {
+	margin-left: 0;
+	margin-right: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+.aligncenter {
+	display: block;
+	margin: ($spacer / 2) auto;
+	height: auto;
+}
+
+.alignleft,
+.alignright {
+	margin-bottom: ($spacer / 2);
+	height: auto;
+}
+
+.alignwide,
+.alignfull {
+	margin: 2rem calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+@include media-breakpoint-up(sm) {
+	.alignleft {
+		float: left;
+		margin-right: ($spacer / 2);
+	}
+	
+	.alignright {
+		float: right;
+		margin-left: ($spacer / 2);
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.alignwide {
+		width: 1210px;
+		max-width: 1210px;
+		margin: 2rem -50px;
+	}
+}
+
+/** Captions */
+.wp-caption {
+	@extend .figure;
+}
+
+.wp-caption img {
+	@extend .figure-img;
+	@extend .img-fluid;
+}
+
+.wp-caption-text {
+	@extend .figure-caption;
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+	@extend .sr-only;
+	@extend .sr-only-focusable;
+}
+
+figure.wp-block-pullquote {
+	display: block;
+}
+
+.has-primary-background-color {
+	background-color: $primary;
+}
+
+.has-secondary-background-color {
+	background-color: $secondary;
+}
+
+.has-primary-color {
+	color: $primary;
+}
+
+.has-secondary-color {
+	color: $secondary;
+}

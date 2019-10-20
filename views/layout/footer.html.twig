@@ -1,0 +1,52 @@
+<footer class="site-footer">
+
+    {# BEGIN Content Info #}
+    <section class="content-info py-12">
+        <div class="container">
+            <div class="row">
+                {% for column in settings['sidebars']['footer'] %}
+                    <div class="{{ column['classes'] }}">
+                        {{ _context['sidebar_footer_' ~ loop.index] }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {# END Content Info #}
+
+    {# BEGIN Colophon #}
+    <nav class="colophon navbar d-flex">
+        <div class="container flex-wrap flex-column flex-md-row align-items-start align-items-md-center justify-content-start">
+            {# BEGIN Copyright #}
+            <span class="footer-copyright">
+                {{ settings['copyright'] }}
+            </span>
+            {# END Copyright #}
+
+            {# BEGIN Credit #}
+            <div class="footer-credit d-flex align-items-center ml-md-auto order-md-last">
+                <span class="mr-1">{{ settings['credit']['text'] }}</span>
+                <a class="ml-auto" href="{{ settings['credit']['link'] }}">
+                    <span class="d-md-none">{{ settings['credit']['name'] }}</span>
+                    <img class="" style="width:2rem;" src="{{ settings['credit']['logo'] }}" alt="{{ settings['credit']['name'] }} Logo">
+                </a>
+            </div>
+            {# END Credit #}
+
+            {# BEGIN Footer Menu #}
+            {% if menus.footer.get_items %}
+                <div class="footer-menu-wrapper order-first order-lg-2">
+                    <ul class="navbar-nav flex-column flex-md-row mr-auto">
+                        {% for item in menus.footer.get_items %}
+                            <li class="nav-item active {{ item.classes | join(' ') }}">
+                                <a class="nav-link pl-0 pl-lg-2" href="{{ item.link }}" target="{{ item.target }}">{{ item.title }} <span class="sr-only">(current)</span></a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            {# END Footer Menu #}
+        </div>
+    </nav>
+    {# END Colophon #}
+</footer>

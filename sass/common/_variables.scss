@@ -1,0 +1,50 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$primary: hsl(235, 66%, 59%);
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$font-family-base: 'Rubik', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$enable-caret: false;
+$enable-responsive-font-sizes: true;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$spacers: (
+	0:		 0,
+	1:		.25rem,
+	2:		.50rem,
+	3:		.75rem,
+	4:		1.00rem,
+	5:		1.25rem,
+	6:		1.50rem,
+	7:		1.75rem,
+	8:		2.00rem,
+	9: 		2.25rem,
+	10:		2.50rem,
+	11:		2.75rem,
+	12:		3.00rem,
+	13: 	3.25rem,
+	14:		3.50rem,
+	15:		3.75rem,
+	16:		4.00rem,
+);
+
+$body-bg: $gray-100;
+$body-color: $gray-600;
+
+$headings-color: $primary;

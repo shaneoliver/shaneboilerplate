@@ -1,0 +1,76 @@
+$content-info-bg: $secondary;
+$content-info-color: $white;
+$content-info-link-color: $white;
+$content-info-link-color-hover: darken($content-info-link-color, 10%);;
+$colophon-bg: $dark;
+$colophon-color: $white;
+$colophon-link-color: $colophon-color;
+$colophon-link-color-hover: darken($colophon-link-color, 10%);
+
+.site-footer {
+
+    margin-top: auto;
+
+    .content-info {
+        background-color: $content-info-bg;
+        color: $content-info-color;
+
+        h1,h2,h3,h4,h5,h6,
+        .widget-heading {
+            color: inherit;
+        }
+    }
+
+    .widget {
+
+        a {
+            line-height: 2;
+            color: $content-info-link-color;
+
+            @include hover-focus {
+                color: $content-info-link-color-hover
+            }
+        }
+
+        .widget-heading {
+            color: $content-info-color;
+        }
+
+        &.widget_nav_menu,
+        &.widget_pages {
+            
+            ul {
+                padding: 0;
+                list-style: none;
+
+                // Remove any nested lists to force a single level
+                ul {
+                    display: none;
+                }
+            }
+        }
+
+        &.widget_calendar {
+            .table {
+                @extend .table-light;
+            }
+            caption {
+                color: $content-info-color;
+            }
+        }
+    }
+    
+    .colophon {
+        background-color: $colophon-bg;
+        color: $colophon-link-color;
+
+        a {
+            color: $colophon-link-color;
+            
+            @include hover-focus {
+                text-decoration: none;
+                color: $colophon-link-color-hover;
+            }
+        }
+    }
+}

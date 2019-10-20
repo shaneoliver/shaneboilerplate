@@ -1,0 +1,25 @@
+<div class="entry-meta">
+    <p class="entry-meta-date mb-2"><span class="fad fa-calendar"></span> {{ post.date }}</p>
+    <div class="entry-meta-author mb-2">
+        <span class="fad fa-user"></span>
+        {% for author in post.authors %}
+            <a href="{{ author.link }}">{{ author.name }}</a>{{ loop.revindex0 == 1 ? ' and' : loop.revindex0 ? ', '  }}
+        {% endfor %}
+    </div>
+    {% if post.categories %}
+        <div class="entry-meta-categories mb-2">
+            <span class="fad fa-tags"></span>
+            {% for category in post.categories %}
+                <a href="{{ category.link }}">{{ category.name }}</a>{{ loop.revindex0 == 1 ? ' and' : loop.revindex0 ? ', '  }}
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if post.tags %}
+        <div class="entry-meta-tags mb-2">
+            <span class="fad fa-tags"></span>
+            {% for tag in post.tags %}
+                <a href="{{ tag.link }}">{{ tag.name }}</a>{{ loop.revindex0 == 1 ? ' and' : loop.revindex0 ? ', '  }}
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

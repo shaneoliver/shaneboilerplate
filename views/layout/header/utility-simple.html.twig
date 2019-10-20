@@ -1,0 +1,3 @@
+{% if menus.secondary %}
+    {% include 'layout/nav-simple.html.twig' with { items: menus.secondary.get_items } %}
+{% endif %}

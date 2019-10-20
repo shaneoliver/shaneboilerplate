@@ -1,0 +1,71 @@
+.woocommerce .woocommerce-ordering select {
+    @extend .custom-select;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+    @extend .btn, .btn-primary;
+}
+
+.woocommerce div.product form.cart .button {
+    @extend .btn, .btn-primary;
+}
+
+.woocommerce .quantity .qty {
+    @extend .form-control;
+    width: 100px;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    font-weight: normal;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: $body-bg;
+    border-bottom-color: $body-bg;
+
+    &::before {
+        box-shadow: 2px 2px 0 $body-bg
+    }
+    &::after {
+        box-shadow: -2px 2px 0 $body-bg;
+    }
+}
+.woocommerce #content table.cart td.actions .coupon, 
+.woocommerce table.cart td.actions .coupon, 
+.woocommerce-page #content table.cart td.actions .coupon, 
+.woocommerce-page table.cart td.actions .coupon {
+    @extend .form-inline;
+}
+
+.woocommerce .coupon label {
+    @extend .sr-only;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text, 
+.woocommerce-cart table.cart td.actions .coupon .input-text, 
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+    @extend .form-control;
+}
+
+.woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled], .woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled], .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce input.button.disabled, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled] {
+    padding: $btn-padding-y $btn-padding-x;
+    color: $white;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+.woocommerce-cart {
+    .woocommerce #respond input#submit.alt, 
+    .woocommerce a.button.alt, 
+    .woocommerce button.button.alt, 
+    .woocommerce input.button.alt {
+        @extend .btn, .btn-primary, .btn-lg, .btn-block;
+    }
+
+    .woocommerce {
+        @extend .container;
+    }
+}

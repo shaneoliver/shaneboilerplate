@@ -1,0 +1,124 @@
+.gform_wrapper {
+    font-family: $font-family-base;
+
+    li.hidden_label input {
+        margin-top: 0 !important;
+    }
+
+    h3.gform_title {
+        margin-bottom: 2rem;
+        font-size: $h3-font-size;
+    }
+
+    span.gform_description {
+        width: 100%;
+        margin-bottom: 2rem;
+        font-size: 1.125rem;
+    }
+
+    .gfield {
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="url"],
+        select,
+        textarea {
+
+            padding: $input-padding-y $input-padding-x !important;
+            margin-bottom: 0 !important;
+
+            @extend .form-control;
+            width: 100% !important;
+        }
+
+        select {
+            @extend .custom-select;
+
+        }
+
+        .gfield_description {
+            padding: .25rem 0 0 0 !important;
+
+            &.validation_message {
+                font-weight: 400 !important;
+                color: $danger !important;
+            }
+        }
+
+        .gfield_required {
+            color: $danger;
+        }
+
+        // Input validation
+        &.gfield_error {
+            background-color: transparent !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            border: none !important;
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            input[type="tel"],
+            input[type="url"],
+            select,
+            textarea {
+                border: 1px solid $danger !important;
+            }
+
+            .gfield_label {
+                color: $danger;
+            }
+        }
+    }
+
+    .gfield_label {
+        color: $primary;
+        text-transform: uppercase;
+    }
+
+    .ginput_container {
+        margin-top: 0 !important;
+    }
+
+    .gform_button,
+    input[type="submit"],
+    input[type="button"] {
+        @extend .btn, .btn-primary;
+        font-size: .875rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: .875rem 2rem;
+
+        .entry & {
+            @extend .btn-danger;
+            font-weight: 700;
+        }
+    }
+
+    // Inline forms
+    .gf_simple_horizontal {
+        width: 100% !important;
+    }
+
+    // Validation
+    .gfield_description .validation_message {
+        font-weight: 400 !important;
+        color: $danger !important;
+    }
+
+    div.validation_error {
+        padding: $alert-padding-y $alert-padding-x;
+        font-weight: normal;
+        border: $alert-border-width solid $danger;
+        text-align: left;
+        font-size: .825rem;
+        color: $danger;
+        @extend .alert, .alert-danger;
+
+        .entry & {
+            font-size: 1.125rem;
+        }
+    }
+}

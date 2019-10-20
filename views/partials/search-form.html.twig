@@ -1,0 +1,13 @@
+{% block searchform %}
+    <form role="search" method="get" class="search-form form" action="{{ site.url }}/">
+        <div class="input-group">
+            <label for="404-search">
+                <span class="sr-only">{{ __('Search for:', text_domain) }}</span>
+            </label>
+            <input id="404-search"  type="search" class="form-control" placeholder="{{ __( 'Search …', text_domain ) }}" value="" name="s" title="{{ __('Search for:', text_domain) }}" />
+            <div class="input-group-append">
+                <input type="submit" class="btn btn-primary" value="Search" />
+            </div>
+        </div>
+    </form>
+{% endblock %}
